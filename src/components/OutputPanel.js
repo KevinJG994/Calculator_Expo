@@ -4,7 +4,8 @@ import { View, Text, StyleSheet } from 'react-native';
 const OutputPanel = ({item}) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.outputText}>Output</Text>
+            //TODO - outputText debe mostrar el resultado
+            <Text style={styles.outputText}>{item}</Text>
             <Text style={styles.inputText}>{item}</Text>
         </View>
     );

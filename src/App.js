@@ -18,6 +18,7 @@ export default function App() {
   );
 }
 
+//TODO - OutputPanel, debe tener un límite en el margin left
 const styles = StyleSheet.create({
   container: {
     flex: 1,
