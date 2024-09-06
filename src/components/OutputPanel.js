@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const OutputPanel = () => {
+const OutputPanel = ({item}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.outputText}>Output</Text>
-            <Text style={styles.inputText}>0</Text>
+            <Text style={styles.inputText}>{item}</Text>
         </View>
     );
 };

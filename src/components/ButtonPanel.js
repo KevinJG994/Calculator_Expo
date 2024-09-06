@@ -1,75 +1,83 @@
-import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Pressable } from "react-native";
 
-const ButtonPanel = () => {
+const ButtonPanel = ({ item, setItem }) => {
+
+    function setNum(num) {
+        if (item == "0")
+            setItem(num);
+        else
+            setItem(item + num);
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.row}>
-                <TouchableOpacity style={[styles.button, styles.doubleHorizontal]}>
+                <Pressable onPress={() => setItem('0')} style={[styles.button, styles.doubleHorizontal]}>
                     <Text style={styles.buttonText}>AC</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.operatorButton}>
+                </Pressable>
+                <Pressable onPress={() => setNum('%')} style={styles.operatorButton}>
                     <Text style={styles.buttonText}>%</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.operatorButton}>
+                </Pressable>
+                <Pressable onPress={() => setNum('/')} style={styles.operatorButton}>
                     <Text style={styles.buttonText}>/</Text>
-                </TouchableOpacity>
+                </Pressable>
             </View>
 
             <View style={styles.row}>
-                <TouchableOpacity style={styles.button}>
+                <Pressable onPress={() => setNum('7')} style={styles.button}>
                     <Text style={styles.buttonText}>7</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                </Pressable>
+                <Pressable onPress={() => setNum('8')} style={styles.button}>
                     <Text style={styles.buttonText}>8</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                </Pressable>
+                <Pressable onPress={() => setNum('9')} style={styles.button}>
                     <Text style={styles.buttonText}>9</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.operatorButton}>
+                </Pressable>
+                <Pressable onPress={() => setNum('x')} style={styles.operatorButton}>
                     <Text style={styles.buttonText}>X</Text>
-                </TouchableOpacity>
+                </Pressable>
             </View>
 
             <View style={styles.row}>
-                <TouchableOpacity style={styles.button}>
+                <Pressable onPress={() => setNum('4')} style={styles.button}>
                     <Text style={styles.buttonText}>4</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                </Pressable>
+                <Pressable onPress={() => setNum('5')} style={styles.button}>
                     <Text style={styles.buttonText}>5</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                </Pressable>
+                <Pressable onPress={() => setNum('6')} style={styles.button}>
                     <Text style={styles.buttonText}>6</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.operatorButton}>
-                    <Text style={styles.buttonText}>-</Text>
-                </TouchableOpacity>
+                </Pressable>
+                <Pressable style={styles.operatorButton}>
+                    <Text onPress={() => setNum('-')} style={styles.buttonText}>-</Text>
+                </Pressable>
             </View>
 
             <View style={styles.row}>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>1</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <Pressable style={styles.button}>
+                    <Text onPress={() => setNum('1')} style={styles.buttonText}>1</Text>
+                </Pressable>
+                <Pressable onPress={() => setNum('2')} style={styles.button}>
                     <Text style={styles.buttonText}>2</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                </Pressable>
+                <Pressable onPress={() => setNum('3')} style={styles.button}>
                     <Text style={styles.buttonText}>3</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.operatorButton}>
+                </Pressable>
+                <Pressable onPress={() => setNum('+')} style={styles.operatorButton}>
                     <Text style={styles.buttonText}>+</Text>
-                </TouchableOpacity>
+                </Pressable>
             </View>
 
             <View style={styles.row}>
-                <TouchableOpacity style={[styles.button, styles.doubleHorizontal]}>
+                <Pressable onPress={() => setNum('0')} style={[styles.button, styles.doubleHorizontal]}>
                     <Text style={styles.buttonText}>0</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                </Pressable>
+                <Pressable onPress={() => setNum('.')} style={styles.button}>
                     <Text style={styles.buttonText}>.</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.operatorButton}>
+                </Pressable>
+                <Pressable style={styles.operatorButton}>
                     <Text style={styles.buttonText}>=</Text>
-                </TouchableOpacity>
+                </Pressable>
             </View>
         </View>
     );

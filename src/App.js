@@ -2,12 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import ButtonPanel from './components/ButtonPanel';
 import OutputPanel from './components/OutputPanel';
+import { useState } from 'react';
 
 export default function App() {
+  const [item, setItem] = useState('');
+
   return (
     <View style={styles.container}>
-      <OutputPanel />
-      <ButtonPanel />
+      <View style={styles.calculatorContainer}>
+        <OutputPanel item={item} />
+        <ButtonPanel item={item} setItem={setItem} />
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,8 +21,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#444',
-    alignItems: 'flex-end',
+    backgroundColor: '#ff9500',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  calculatorContainer: {
+    flex: 1,
+    width: '100%',
     justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    // maxWidth: '375px',
+    // maxHeight: '667px',
+    backgroundColor: '#444',
   },
 });
