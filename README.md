@@ -1,7 +1,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/KevinJG994/Calculator_Expo)
 ![GitHub last commit](https://img.shields.io/github/last-commit/KevinJG994/Calculator_Expo)
 
-# Calculadora con Expo📱
+# Calculadora con Expo <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="25" style="margin-right: 10px;"/> 
 Una **calculadora simple** desarrollada con React Native y Expo. Este proyecto está diseñado para practicar el desarrollo de aplicaciones móviles con React Native y aprender sobre el manejo de estados y props.
 
 ## Funcionalidades
