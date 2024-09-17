@@ -24,9 +24,6 @@ Sigue estos pasos para instalar y ejecutar el proyecto:
 3. **🚀 Arrancar el Proyecto:** <br>
    `npm start`
 
-## Demo
-
-(Agregar aquí un enlace a una demostración en vivo o un video si está disponible.)
 
 ## Diseño 🎥
 
